@@ -8,11 +8,15 @@ public abstract class Visualizador {
 
     protected abstract Documento crearDocumento();
 
+    public void visualizar(){
+        abrir();
+        mostrar();
+        cerrar();
+    }
     public void abrir(){
-        documento = crearDocumento();
+        documento =  crearDocumento();
         documento.abrir();
     }
-
 
     public void cerrar(){
         if(documento != null) documento.cerrar();
@@ -21,5 +25,5 @@ public abstract class Visualizador {
     public void mostrar(){
         if (documento != null) documento.mostrar();
     }
-
+    
 }
