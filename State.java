@@ -1,13 +1,12 @@
 import java.util.*;
-import Documento.*;
 
 public class State {
     private static State instancia = null;
-    private ArrayList<Documento> documentos;
+    private ArrayList<String> documentos;
 
 
     private State(){
-        documentos = new ArrayList<Documento>();
+        documentos = new ArrayList<String>();
     }
 
     public static State getInstancia(){
@@ -17,11 +16,11 @@ public class State {
         return instancia;
     }
 
-    public void agregarDocumentos(Documento documento){
+    public void agregarDocumentos(String documento){
         documentos.add(documento);
     }
 
-    public ArrayList<Documento> obtenerDocumentos(){
+    public ArrayList<String> obtenerDocumentos(){
         return documentos;
     }
 }
